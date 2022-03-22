@@ -3,7 +3,6 @@ import React from "react"
 
 const blog = ({ data }) => {
   const { posts } = data.blog
-  console.log({ posts })
   return (
     <div>
       <h1>blog</h1>
