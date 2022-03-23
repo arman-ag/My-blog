@@ -1,7 +1,8 @@
 import { graphql } from "gatsby"
 import React from "react"
+import { blogPostProps } from "./types"
 
-const blogPosts = ({ data }) => {
+const blogPosts = ({ data }: blogPostProps) => {
   const post = data.markdownRemark
   return (
     <div>
