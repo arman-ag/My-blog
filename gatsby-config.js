@@ -31,17 +31,17 @@ module.exports = {
           },
           keySeparator: false,
           nsSeparator: false
-        },
-        pages: [
-          {
-            matchPath: '/:lang?/blog/:uid',
-            getLanguageFromPath: true
-          },
-          {
-            matchPath: '/preview',
-            languages: ['en']
-          }
-        ]
+        }
+        // pages: [
+        //   {
+        //     matchPath: '/:lang?/blog/:uid',
+        //     getLanguageFromPath: true
+        //   },
+        //   {
+        //     matchPath: '/preview',
+        //     languages: ['en']
+        //   }
+        // ]
       }
     },
     {
