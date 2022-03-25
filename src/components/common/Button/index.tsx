@@ -1,10 +1,11 @@
+import { Link } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { buttonProps } from './types';
 
-const Button = ({ children }: buttonProps) => {
+const Button = ({ children, href }: buttonProps) => {
   return (
     <>
-      <button>{children}</button>
+      <button>{href ? <Link to={href!}>{children}</Link> : children}</button>
     </>
   );
 };

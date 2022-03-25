@@ -6,7 +6,6 @@ import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const { languages, originalPath } = useI18next();
-  console.log({ originalPath });
   return (
     <header>
       <nav>
@@ -15,13 +14,16 @@ const Header = () => {
           <Button>
             <SunIcon />
           </Button>
+          <Button href={'/'}>
+            <Trans>home</Trans>
+          </Button>
           <Button>
             <Trans>about me</Trans>
           </Button>
           <Button>
             <Trans>projects</Trans>
           </Button>
-          <Button>
+          <Button href={'/blog'}>
             <Trans>blog</Trans>
           </Button>
           <ul>
