@@ -4,7 +4,8 @@ import Button from '../common/Button';
 import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
-  const { languages, originalPath } = useI18next();
+  const { language, originalPath, languages } = useI18next();
+  console.log({ language });
   return (
     <header>
       <nav>
@@ -23,15 +24,15 @@ const Header = () => {
           <Button href={'/blog'}>
             <Trans>blog</Trans>
           </Button>
-          <ul>
-            {languages.map((lng: string) => (
-              <li key={lng}>
-                <Link to={originalPath} language={lng}>
-                  {lng}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {language === 'en' ? (
+            <Link to={originalPath} language={'fa'}>
+              Farsi
+            </Link>
+          ) : (
+            <Link to={originalPath} language={'en'}>
+              English
+            </Link>
+          )}
         </div>
       </nav>
     </header>
