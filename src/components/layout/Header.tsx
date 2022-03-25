@@ -1,4 +1,3 @@
-import { SunIcon } from '@heroicons/react/solid';
 import { Link, Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import Button from '../common/Button';
@@ -11,9 +10,7 @@ const Header = () => {
       <nav>
         <div className="flex justify-around ">
           <ThemeToggle />
-          <Button>
-            <SunIcon />
-          </Button>
+
           <Button href={'/'}>
             <Trans>home</Trans>
           </Button>
