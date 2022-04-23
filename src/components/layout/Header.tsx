@@ -8,30 +8,33 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <div className="flex justify-around ">
-          <ThemeToggle />
-
-          <Button href={'/'}>
+        <div className="flex justify-between ">
+          <div className="flex justify-around basis-56">
+            {/* <Button href={'/'}>
             <Trans>home</Trans>
-          </Button>
-          <Button>
-            <Trans>about me</Trans>
-          </Button>
-          <Button>
-            <Trans>projects</Trans>
-          </Button>
-          <Button href={'/blog'}>
-            <Trans>blog</Trans>
-          </Button>
-          {language === 'en' ? (
-            <Link to={originalPath} language={'fa'}>
-              فارسی
-            </Link>
-          ) : (
-            <Link to={originalPath} language={'en'}>
-              English
-            </Link>
-          )}
+          </Button> */}
+            <Button>
+              <Trans>header.about-me</Trans>
+            </Button>
+            <Button>
+              <Trans>header.projects</Trans>
+            </Button>
+            <Button href={'/blog'}>
+              <Trans>header.blog</Trans>
+            </Button>
+          </div>
+          <div className="flex justify-around basis-40">
+            {language === 'en' ? (
+              <Link to={originalPath} language={'fa'}>
+                فارسی
+              </Link>
+            ) : (
+              <Link to={originalPath} language={'en'}>
+                English
+              </Link>
+            )}
+            <ThemeToggle />
+          </div>
         </div>
       </nav>
     </header>

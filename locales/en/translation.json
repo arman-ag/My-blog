@@ -1,7 +1,6 @@
 {
-  "about me": "about me",
-  "blog": "blog",
-  "projects": "projects",
-  "home": "home",
-  "description": "Front-end developer with almost 2 years experience developing and building sites . I specialize in React.some of my hallmarks that can be useful in your organizational goals are my high teamwork spirit and my problem-solving ability."
+  "header.about-me": "about me",
+  "header.blog": "blog",
+  "header.projects": "projects",
+  "about.description": "Front-end developer with almost 2 years experience developing and building sites . I specialize in React.some of my hallmarks that can be useful in your organizational goals are my high teamwork spirit and my problem-solving ability."
 }

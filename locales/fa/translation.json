@@ -1,7 +1,6 @@
 {
-  "about me": "درباره ی من",
-  "blog": "وبلاگ",
-  "projects": "پروژه ها",
-  "home": "خانه",
-  "description": "برنامه نویس با 2 سال تجربه در توسعه وساخت  سایت   "
+  "header.about-me": " من کیم؟",
+  "header.blog": "وبلاگ",
+  "header.projects": "پروژه ها",
+  "about.description": "برنامه نویس با 2 سال تجربه در توسعه وساخت  سایت   "
 }
