@@ -15,6 +15,10 @@ module.exports = {
       colors: {
         primary: 'var(--primary)',
         'text-main': 'var(--text-main)'
+      },
+
+      fontFamily: {
+        vazir: ['vazirmatn', 'vazir-font']
       }
     }
   },

@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import '../../scss/index.scss';
 import Footer from './Footer';
 import Header from './Header';
 import { layoutProps } from './types';
@@ -19,11 +18,10 @@ const Layout = ({ children }: layoutProps) => {
       }
     }
   `);
-  console.log(pageQuery);
   return (
     <div dir={isRtl ? 'rtl' : 'ltr'} className="theme-dark bg-primary text-text-main ">
       <Header />
-      {children}
+      <main className=" h-screen">{children}</main>
       <Footer />
     </div>
   );

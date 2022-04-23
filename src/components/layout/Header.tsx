@@ -5,7 +5,6 @@ import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const { language, originalPath, languages } = useI18next();
-  console.log({ language });
   return (
     <header>
       <nav>
@@ -26,7 +25,7 @@ const Header = () => {
           </Button>
           {language === 'en' ? (
             <Link to={originalPath} language={'fa'}>
-              Farsi
+              فارسی
             </Link>
           ) : (
             <Link to={originalPath} language={'en'}>
