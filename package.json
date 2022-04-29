@@ -1,7 +1,7 @@
 {
-  "name": "my-blog",
+  "name": "A-Ag blog",
   "private": true,
-  "description": "A-Ag blog",
+  "description": "just simple blog",
   "version": "0.1.0",
   "scripts": {
     "dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
