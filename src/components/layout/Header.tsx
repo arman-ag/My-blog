@@ -1,6 +1,6 @@
 import { Link, Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import React from 'react';
-import Button from '../common/Button';
+import Button from '../Button';
 import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
             {/* <Button href={'/'}>
             <Trans>home</Trans>
           </Button> */}
-            <Button>
+            <Button href={'/about'}>
               <Trans>header.about-me</Trans>
             </Button>
             <Button>

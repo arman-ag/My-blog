@@ -1,7 +1,7 @@
 import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import React from 'react';
-import Button from '../common/Button';
+import Button from '../Button';
 export default function ThemeToggle() {
   return (
     <ThemeToggler>
