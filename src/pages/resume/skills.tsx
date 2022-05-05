@@ -1,20 +1,19 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import { Trans } from 'react-i18next';
-import AboutSections from '../../components/AboutSection';
+import GroupButtons from '../../components/GroupButton';
 import Layout from '../../components/layout';
+import Technologies from '../../components/TechnologiesSection';
 
-const about = () => {
+const skills = () => {
   return (
-    <>
-      <Layout>
-        <Trans>about.description</Trans>
-        <AboutSections />
-      </Layout>
-    </>
+    <Layout>
+      <Technologies />
+      <GroupButtons />
+    </Layout>
   );
 };
-export default about;
+
+export default skills;
 export const query = graphql`
   query ($language: String!) {
     locales: allLocale(filter: { language: { eq: $language } }) {

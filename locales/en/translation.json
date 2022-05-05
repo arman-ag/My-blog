@@ -4,5 +4,7 @@
   "header.projects": "projects",
   "about.description": "Front-end developer with almost 2 years experience developing and building sites . I specialize in React.some of my hallmarks that can be useful in your organizational goals are my high teamwork spirit and my problem-solving ability.",
   "technologies.years": "years",
-  "technologies.skills": "skills"
+  "technologies.skills": "skills",
+  "resume.jobs": "jobs",
+  "resume.education": "education"
 }
