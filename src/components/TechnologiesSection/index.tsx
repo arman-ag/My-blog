@@ -20,7 +20,6 @@ const Technologies = () => {
       }
     }
   `);
-  console.log(skills);
 
   return (
     <div>
