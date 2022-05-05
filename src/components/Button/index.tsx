@@ -7,12 +7,12 @@ const Button = ({ children, href, onClick, solid = false, styles }: buttonProps)
     <>
       {solid ? (
         <button
-          className={`${styles} min-w-[18%] py-2 font	 text-lg bg-gray-100 focus:bg-blue rounded`}
+          className={`${styles} min-w-[18%] py-2 	 text-lg bg-gray-100 focus:bg-blue rounded`}
           onClick={onClick!}>
           {href ? <Link to={href!}>{children}</Link> : children}
         </button>
       ) : (
-        <button className={`${styles} text-base`} onClick={onClick!}>
+        <button className={`${styles} text-base py-2`} onClick={onClick!}>
           {href ? <Link to={href!}>{children}</Link> : children}
         </button>
       )}

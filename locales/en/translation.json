@@ -6,5 +6,18 @@
   "technologies.years": "years",
   "technologies.skills": "skills",
   "resume.jobs": "jobs",
-  "resume.education": "education"
+  "resume.education": "education",
+  "education.university-name": "shahid rajayi university of shiraz",
+  "education.degree": "Bachelor’s degree chemical engineering",
+  "education.finish-year": "2014",
+  "education.education": "education",
+  "jobs.jobs": "jobs",
+  "jobs.jihaat": "Jihaat",
+  "jobs.jihaat-year": "08/2020 - 01/2022",
+  "jobs.ict-army": "ICT army",
+  "jobs.ict-army-year": "02/2018 - 01/2019",
+  "jobs.eniac": "Eniac",
+  "jobs.eniac-year": "12/2021 - 03/2022",
+  "jobs.novindev": "Novin Dev",
+  "jobs.novindev-year": "04/2022-now"
 }
