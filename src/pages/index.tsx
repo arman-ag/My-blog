@@ -2,14 +2,15 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import { Trans } from 'react-i18next';
 import Layout from '../components/layout';
+import Technologies from '../components/TechnologiesSection';
 
 export default function Home() {
   return (
     <>
       <Layout>
-        <div className="sm:container sm:mx-auto 	">
-          <Trans>about.description</Trans>
-        </div>
+        <Trans>about.description</Trans>
+
+        <Technologies />
       </Layout>
     </>
   );

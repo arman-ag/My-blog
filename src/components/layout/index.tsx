@@ -21,7 +21,9 @@ const Layout = ({ children }: layoutProps) => {
   return (
     <div dir={isRtl ? 'rtl' : 'ltr'} className="theme-dark bg-primary text-text-main ">
       <Header />
-      <main className=" h-screen">{children}</main>
+      <div className="sm:container sm:mx-auto 	">
+        <main className=" h-screen">{children}</main>
+      </div>
       <Footer />
     </div>
   );

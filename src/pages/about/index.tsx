@@ -9,11 +9,9 @@ const about = () => {
   return (
     <>
       <Layout>
-        <div className="sm:container sm:mx-auto 	">
-          <Trans>about.description</Trans>
-          <Technologies />
-          <AboutSections />
-        </div>
+        <Trans>about.description</Trans>
+        <Technologies />
+        <AboutSections />
       </Layout>
     </>
   );
