@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Footer from './Footer';
@@ -9,15 +8,6 @@ const Layout = ({ children }: layoutProps) => {
   const { i18n } = useTranslation();
   const isRtl = i18n.dir() === 'rtl';
 
-  const pageQuery = useStaticQuery(graphql`
-    query MetadataQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
   return (
     <div dir={isRtl ? 'rtl' : 'ltr'} className="theme-dark bg-primary text-text-main ">
       <Header />

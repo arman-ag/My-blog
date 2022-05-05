@@ -1,13 +1,6 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
+const siteMetadata = require('./src/data/siteMetadata');
 module.exports = {
-  siteMetadata: {
-    title: 'My-blog',
-    description: 'This is my awesome blog '
-  },
+  siteMetadata,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
