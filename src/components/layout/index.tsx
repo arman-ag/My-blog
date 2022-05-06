@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Aside from './Aside';
 import Footer from './Footer';
 import Header from './Header';
 import { layoutProps } from './types';
@@ -11,8 +12,10 @@ const Layout = ({ children }: layoutProps) => {
   return (
     <div dir={isRtl ? 'rtl' : 'ltr'} className="theme-dark bg-primary text-text-main ">
       <Header />
-
-      <main className="sm:container sm:mx-auto ">{children}</main>
+      <div className="flex">
+        <Aside />
+        <main className=" min-h-screen 	 px-4">{children}</main>
+      </div>
       <Footer />
     </div>
   );
