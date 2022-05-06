@@ -2,7 +2,9 @@
   "header.about-me": " من کیم؟",
   "header.blog": "وبلاگ",
   "header.projects": "پروژه ها",
-  "about.description": "برنامه نویس با 2 سال تجربه در توسعه وساخت  سایت   ",
+  "main.description": "برنامه نویس با 2 سال تجربه در توسعه وساخت  سایت   ",
+  "main.more": "بیشتر ...",
+
   "technologies.years": "سال",
   "technologies.skills": "مهارت ها",
   "technologies.novice": "مبتدی",
