@@ -24,7 +24,7 @@ const Aside = () => {
   `);
   return (
     <aside>
-      <div className="flex flex-col items-center sticky top-24 mx-5 ">
+      <div className="flex flex-col items-center sticky top-11 mx-5 ">
         <div className="">
           <Img
             fluid={pageQuery.file.childrenImageSharp[0].fluid}

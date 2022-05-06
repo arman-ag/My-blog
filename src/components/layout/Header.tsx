@@ -6,7 +6,7 @@ import ThemeToggle from './ThemeToggle';
 const Header = () => {
   const { language, originalPath, languages } = useI18next();
   return (
-    <header>
+    <header className="md:block hidden">
       <nav>
         <div className="flex justify-between ">
           <div className="flex justify-around basis-56">
