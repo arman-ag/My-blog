@@ -2,7 +2,7 @@ import { Link } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { buttonProps } from './types';
 
-const Button = ({ children, href, onClick, solid = false, styles }: buttonProps) => {
+const Button = ({ children, href, onClick = null, solid = false, styles }: buttonProps) => {
   return (
     <>
       {solid ? (
