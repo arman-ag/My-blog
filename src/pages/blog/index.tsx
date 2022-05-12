@@ -1,8 +1,9 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react';
 import Layout from '../../components/layout';
-import { blogProps } from './type';
-
+interface blogProps {
+  [key: string]: any;
+}
 const blog = ({ data }: blogProps) => {
   const { posts } = data.blog;
   return (
