@@ -10,7 +10,7 @@ const HamburgerMenu = ({ open = false }: HamburgerMenuProps) => {
       className={`transition ease-in-out duration-200	 justify-between w-full h-full fixed bg-gray-100	opacity-95 ${
         open ? `translate-x-full` : `translate-x-0`
       }`}>
-      <div className="flex flex-col  items-end m-16	">
+      <div className="flex flex-col  items-center m-16	">
         {/* <Button href={'/'}>
             <Trans>home</Trans>
           </Button> */}
