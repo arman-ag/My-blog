@@ -63,6 +63,7 @@ module.exports = {
     `gatsby-plugin-emotion`,
     'gatsby-plugin-dark-mode',
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`
   ]
 };

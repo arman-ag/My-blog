@@ -5,9 +5,11 @@
 body.dark {
   --primary: #111827;
   --text-main: white;
+  --menu: #252525;
 }
 
 body.light {
   --primary: white;
   --text-main: #111827;
+  --menu: #e6e6e6;
 }

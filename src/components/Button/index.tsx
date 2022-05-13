@@ -7,7 +7,7 @@ const Button = ({ children, href, onClick = null, solid = false, styles }: butto
     <>
       {solid ? (
         <button
-          className={`${styles} min-w-[18%] py-2 	 text-lg bg-gray-100 focus:bg-blue rounded`}
+          className={`${styles} min-w-[18%] py-2  px-5	text-lg text-white bg-cyan-300 focus:bg-blue rounded`}
           onClick={onClick!}>
           {href ? <Link to={href!}>{children}</Link> : children}
         </button>

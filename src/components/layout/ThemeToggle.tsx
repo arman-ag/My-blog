@@ -9,11 +9,11 @@ export default function ThemeToggle() {
         if (theme == null) return null;
         return theme === 'dark' ? (
           <Button onClick={() => toggleTheme('light')}>
-            <BsFillMoonFill className="h-5 w-5 " />
+            <BsFillSunFill className="h-6 w-6 " />
           </Button>
         ) : (
           <Button onClick={() => toggleTheme('dark')}>
-            <BsFillSunFill className="h-6 w-6 " />
+            <BsFillMoonFill className="h-5 w-5 " />
           </Button>
         );
       }}

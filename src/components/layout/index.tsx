@@ -1,3 +1,4 @@
+import { Helmet } from 'gatsby-plugin-react-i18next';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Aside from './Aside';
@@ -12,6 +13,9 @@ const Layout = ({ children }: layoutProps) => {
 
   return (
     <div dir={isRtl ? 'rtl' : 'ltr'} className="theme-dark bg-primary text-text-main ">
+      <Helmet>
+        <body className={`${open ? 'overflow-hidden' : 'overflow-auto'}`} />
+      </Helmet>
       <Header openMenu={open} setOpenMenu={setOpen} />
       <div className="flex flex-col md:flex-row">
         <Aside />
