@@ -15,13 +15,14 @@ const Layout = ({ children }: layoutProps) => {
   const menuStatus = () => {
     open ? setOpen(false) : setOpen(true);
   };
+
   return (
     <div dir={isRtl ? 'rtl' : 'ltr'} className="theme-dark bg-primary text-text-main ">
       <Header />
       <div className="flex flex-col md:flex-row">
         <Aside />
         <Button onClick={menuStatus} styles="fixed right-10  md:hidden z-10">
-          {open ? <MenuIcon /> : <CloseIcon />}
+          {open ? <CloseIcon /> : <MenuIcon />}
         </Button>
         <HamburgerMenu open={open} />
         <main className=" min-h-screen p-6">{children}</main>

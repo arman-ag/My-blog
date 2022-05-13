@@ -4,11 +4,10 @@ import Button from '../Button';
 import { HamburgerMenuProps } from './types';
 
 const HamburgerMenu = ({ open = false }: HamburgerMenuProps) => {
-  console.log(open);
   return (
     <nav
       className={`transition ease-in-out duration-200	 justify-between w-full h-full fixed bg-gray-100	opacity-95 ${
-        open ? `translate-x-full` : `translate-x-0`
+        open ? `translate-x-0` : `translate-x-full`
       }`}>
       <div className="flex flex-col  items-center m-16	">
         {/* <Button href={'/'}>
