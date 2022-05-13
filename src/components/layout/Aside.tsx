@@ -1,15 +1,11 @@
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import { Trans } from 'react-i18next';
+import { AiFillCalendar, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { BsFillTelephoneFill, BsTelegram, BsTwitter } from 'react-icons/bs';
+import { HiLocationMarker } from 'react-icons/hi';
+import { MdEmail } from 'react-icons/md';
 const Aside = () => {
   const pageQuery = useStaticQuery(graphql`
     query technologies {
@@ -40,33 +36,33 @@ const Aside = () => {
                 to="https://twitter.com/armanAg49?s=09"
                 target="_blank"
                 className=" hover:text-blue">
-                <TwitterIcon className="ml-2" />
+                <BsTwitter className="ml-2 h-5 w-5 " />
               </Link>
               <Link to="mailto:arman.alighanbary@gmail.com" className=" hover:text-blue">
-                <EmailOutlinedIcon className="ml-2" />
+                <MdEmail className="ml-2 h-5 w-5 " />
               </Link>
               <Link to="https://t.me/ag_arman" target="_blank" className=" hover:text-blue">
-                <TelegramIcon className="ml-2" />
+                <BsTelegram className="ml-2 h-5 w-5 " />
               </Link>
               <Link to="https://github.com/arman-ag" target="_blank" className=" hover:text-blue">
-                <GitHubIcon className="ml-2" />
+                <AiFillGithub className="ml-2 h-6 w-6 " />
               </Link>
               <Link to="tel:+989365725645" className=" hover:text-blue">
-                <PhoneEnabledIcon className="ml-2" />
+                <BsFillTelephoneFill className="ml-2 h-5 w-5 " />
               </Link>
               <Link
                 to="https://www.linkedin.com/in/arman-alighanbary-5b5090150/?original_referer="
                 target="_blank"
                 className=" hover:text-blue">
-                <LinkedInIcon className="ml-2" />
+                <AiFillLinkedin className="ml-2 h-6 w-6 " />
               </Link>
             </div>
             <span className="flex mt-2">
-              <CalendarMonthOutlinedIcon className="mx-2" />
+              <AiFillCalendar className="mx-2 h-6 w-6" />
               <Trans>about.birth-date</Trans>
             </span>
             <span className="flex mt-2">
-              <LocationOnOutlinedIcon className="mx-2" />
+              <HiLocationMarker className="mx-2 h-6 w-6" />
               <Trans>about.location</Trans>
             </span>
           </div>
