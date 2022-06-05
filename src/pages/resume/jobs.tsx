@@ -1,15 +1,11 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Trans } from 'react-i18next';
-import GroupButtons from '../../components/GroupButton';
-import Layout from '../../components/layout';
+import ReWrapper from '../../components/layout/ReWrapper';
 
 const jobs = () => {
   return (
-    <Layout>
-      <h1 className="text-center text-2xl">
-        <Trans>jobs.jobs</Trans>
-      </h1>
+    <ReWrapper>
       <div className="my-8">
         <div className="flex my-4">
           <img src={'/images/army.png'} className="mx-4 w-16 " />
@@ -71,8 +67,7 @@ const jobs = () => {
           </div>
         </div>
       </div>
-      <GroupButtons />
-    </Layout>
+    </ReWrapper>
   );
 };
 

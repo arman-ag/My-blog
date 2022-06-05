@@ -5,8 +5,8 @@
   "main.description": "Front-end developer with almost 2 years experience developing and building sites . I specialize in React.some of my hallmarks that can be useful in your organizational goals are my high teamwork spirit and my problem-solving ability.",
   "main.more": "more...",
   "technologies.years": "years",
-  "technologies.skills": "skills",
   "technologies.novice": "novice",
+  "technologies.skills": "skills",
   "technologies.expert": "expert",
   "technologies.proficient": "proficient",
   "resume.jobs": "jobs",
@@ -15,7 +15,6 @@
   "education.degree": "Bachelor’s degree chemical engineering",
   "education.finish-year": "2014",
   "education.education": "education",
-  "jobs.jobs": "jobs",
   "jobs.jihaat": "Jihaat",
   "jobs.jihaat-year": "08/2020 - 01/2022",
   "jobs.ict-army": "ICT army",
@@ -26,5 +25,6 @@
   "jobs.novindev-year": "04/2022-now",
   "about.name": "arman alighanbary",
   "about.location": "fars,shiraz, iran  ",
-  "about.birth-date": "september 1994"
+  "about.birth-date": "August 1994",
+  "404.message": "page not found"
 }

@@ -30,9 +30,6 @@ const Technologies = ({ slice = false }: propsType) => {
   console.log(skills);
   return (
     <div>
-      <h1 className="text-center text-2xl  my-10">
-        <Trans>technologies.skills</Trans>
-      </h1>
       <div className="flex justify-center flex-wrap">
         {data?.map((item: skillType, key: number) => (
           <div className="flex flex-col m-5 justify-center text-center " key={key}>

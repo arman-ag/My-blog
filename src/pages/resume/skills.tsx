@@ -1,15 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
-import GroupButtons from '../../components/GroupButton';
-import Layout from '../../components/layout';
+import ReWrapper from '../../components/layout/ReWrapper';
 import Technologies from '../../components/TechnologiesSection';
 
 const skills = () => {
   return (
-    <Layout>
+    <ReWrapper>
       <Technologies />
-      <GroupButtons />
-    </Layout>
+    </ReWrapper>
   );
 };
 

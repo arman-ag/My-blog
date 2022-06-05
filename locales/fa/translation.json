@@ -3,20 +3,18 @@
   "header.blog": "وبلاگ",
   "header.projects": "پروژه ها",
   "main.description": "برنامه نویس با 2 سال تجربه در توسعه وساخت  سایت   ",
-  "main.more": "بیشتر ...",
+  "main.more": "همشو ببینم ... ",
 
   "technologies.years": "سال",
-  "technologies.skills": "مهارت ها",
+  "technologies.skills": " چه مهارت هایی دارم",
   "technologies.novice": "مبتدی",
   "technologies.expert": "عالی",
   "technologies.proficient": "خوب",
-  "resume.jobs": "سوابق شغلی",
-  "resume.education": "سوابق تحصیلی",
+  "resume.jobs": "کجا ها کار کردم",
+  "resume.education": "تحصیلاتم",
   "education.university-name": "دانشگاه فنی شهید رجایی شیراز",
   "education.degree": "فوق دیپلم صنایع شیمییایی",
   "education.finish-year": "1394",
-  "education.education": "تحصیلات",
-  "jobs.jobs": "مشاغل",
   "jobs.jihaat": "ژیهات",
   "jobs.jihaat-year": "1399/03 - 1400/09",
   "jobs.ict-army": "فاوا ارتش",
@@ -27,5 +25,6 @@
   "jobs.novindev-year": "1401/02-امروز",
   "about.name": "آرمان علی قنبری",
   "about.location": "فارس ، شیراز ، ایران",
-  "about.birth-date": "مرداد 1373"
+  "about.birth-date": "مرداد 1373",
+  "404.message": "صفحه مورد نظر پیدا نشد"
 }
