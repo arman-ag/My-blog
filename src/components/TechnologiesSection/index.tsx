@@ -17,6 +17,7 @@ const Technologies = ({ slice = false }: propsType) => {
             name
             experience
             url
+            years
           }
         }
       }
