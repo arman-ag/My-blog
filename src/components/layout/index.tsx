@@ -17,7 +17,7 @@ const Layout = ({ children }: layoutProps) => {
         <Aside />
 
         <HamburgerMenu open={open} />
-        <main className=" min-h-screen p-6">{children}</main>
+        <main className=" min-h-screen flex-grow p-6">{children}</main>
       </div>
       <Footer />
     </div>

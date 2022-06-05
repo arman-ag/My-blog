@@ -7,7 +7,9 @@ const ReWrapper = ({ children }: layoutProps) => {
   return (
     <Layout>
       <section>
-        <div style={{ minHeight: '70vh' }}>{children}</div>
+        <div className="flex items-center pr-12" style={{ minHeight: '70vh' }}>
+          {children}
+        </div>
         <GroupButtons />
       </section>
     </Layout>

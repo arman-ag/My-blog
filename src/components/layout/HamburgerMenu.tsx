@@ -10,15 +10,15 @@ const HamburgerMenu = ({ open = false }: HamburgerMenuProps) => {
         open ? `translate-x-0` : `translate-x-full`
       }`}>
       <div className="flex flex-col  items-center m-16	">
-        {/* <Button href={'/'}>
-            <Trans>home</Trans>
-          </Button> */}
-        <Button href={'/about'} styles="text-2xl  mt-5  ">
+        <Button href={'/'} styles="text-2xl  mt-5">
+          <Trans>home</Trans>
+        </Button>
+        <Button href={'/resume/jobs'} styles="text-2xl  mt-5">
           <Trans>header.about-me</Trans>
         </Button>
-        <Button styles="text-2xl mt-5 hover:text-black ">
+        {/* <Button styles="text-2xl mt-5 hover:text-black ">
           <Trans>header.projects</Trans>
-        </Button>
+        </Button> */}
         <Button href={'/blog'} styles="text-2xl mt-5 hover:text-black ">
           <Trans>header.blog</Trans>
         </Button>
