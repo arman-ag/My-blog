@@ -9,9 +9,9 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
     openMenu ? setOpenMenu(false) : setOpenMenu(true);
   };
   return (
-    <header>
+    <header className={`${openMenu && `sticky top-0 bg-primary z-10`}`}>
       <nav>
-        <div className="flex justify-between p-3 md:p-0">
+        <div className="flex justify-between p-3 md:p-0 ">
           <div className=" justify-around basis-56 md:flex hidden">
             <Button href={'/'}>
               <Trans>header.home</Trans>

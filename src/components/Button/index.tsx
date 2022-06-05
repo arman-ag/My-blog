@@ -5,8 +5,7 @@ const Button = ({ children, href, onClick = null, solid = false, styles }: butto
   const checkParams = () => {
     const url = location.href.split('/');
     const param = href?.split('/');
-    console.log({ url, param });
-    return url.includes(param[2]);
+    return url.includes(param![2]);
   };
 
   return (

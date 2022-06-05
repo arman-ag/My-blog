@@ -27,7 +27,6 @@ const Technologies = ({ slice = false }: propsType) => {
     slice ? setData(skills.slice(0, 8)) : setData(skills);
   }, [slice]);
 
-  console.log(skills);
   return (
     <div>
       <div className="flex justify-center flex-wrap">

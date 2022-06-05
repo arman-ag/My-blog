@@ -13,7 +13,7 @@ const HamburgerMenu = ({ open = false }: HamburgerMenuProps) => {
         {/* <Button href={'/'}>
             <Trans>home</Trans>
           </Button> */}
-        <Button href={'/about'} styles="text-2xl mt-5 hover:text-black ">
+        <Button href={'/about'} styles="text-2xl  mt-5  ">
           <Trans>header.about-me</Trans>
         </Button>
         <Button styles="text-2xl mt-5 hover:text-black ">
