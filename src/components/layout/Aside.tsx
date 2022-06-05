@@ -24,7 +24,7 @@ const Aside = () => {
         <div className="">
           <Img
             fluid={pageQuery.file.childrenImageSharp[0].fluid}
-            className="rounded-3xl mt-2 w-48  "
+            className="rounded-2xl mt-2 w-48 border  "
           />
           <div className="mt-2 flex flex-col  items-start text-base">
             <span className="flex text-xl font-semibold self-center">

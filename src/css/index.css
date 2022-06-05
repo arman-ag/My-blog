@@ -13,3 +13,10 @@ body.light {
   --text-main: #111827;
   --menu: #e6e6e6;
 }
+@font-face {
+  font-family: 'Vazir';
+  src: url('/fonts/Vazir.ttf') format('truetype');
+}
+body {
+  font-family: 'vazir';
+}

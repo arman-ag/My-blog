@@ -8,7 +8,7 @@ const NotFound = () => {
     <Layout>
       <div className="flex justify-center items-center flex-col grow 		">
         <img src="/images/404.svg" className="w-56 " />
-        <h2 className="text-5xl mt-16">
+        <h2 className="text-5xl mt-16 ">
           <Trans>404.message</Trans>
         </h2>
       </div>

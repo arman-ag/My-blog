@@ -34,7 +34,8 @@ module.exports = {
       },
 
       fontFamily: {
-        vazir: ['vazirmatn', 'vazir-font']
+        vazir: ['Vazir'],
+        estedad: ['EstedadNorm']
       }
     }
   },

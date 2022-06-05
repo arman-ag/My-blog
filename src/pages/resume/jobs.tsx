@@ -10,7 +10,7 @@ const jobs = () => {
         <div className="flex my-4">
           <img src={'/images/army.png'} className="mx-4 w-16 " />
           <div className="flex flex-col">
-            <span>
+            <span className="text-xl  ">
               <Trans>jobs.ict-army</Trans>
             </span>
             <span>
@@ -25,7 +25,7 @@ const jobs = () => {
         <div className="flex my-4">
           <img src={'/images/jihaat.png'} className="mx-4 w-16 " />
           <div className="flex flex-col">
-            <span>
+            <span className="text-xl">
               <Trans>jobs.jihaat</Trans>
             </span>
             <span>
@@ -40,7 +40,7 @@ const jobs = () => {
         <div className="flex my-4">
           <img src={'/images/eniac.png'} className="mx-4 w-20 " />
           <div className="flex flex-col">
-            <span>
+            <span className="text-xl">
               <Trans>jobs.eniac</Trans>
             </span>
             <span>
@@ -55,7 +55,7 @@ const jobs = () => {
         <div className="flex my-4">
           <img src={'/images/Novin.png'} className="mx-2 w-24 " />
           <div className="flex flex-col">
-            <span>
+            <span className="text-xl">
               <Trans>jobs.novindev</Trans>
             </span>
             <span>
