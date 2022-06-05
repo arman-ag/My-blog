@@ -13,15 +13,15 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
       <nav>
         <div className="flex justify-between p-3 md:p-0">
           <div className=" justify-around basis-56 md:flex hidden">
-            {/* <Button href={'/'}>
-            <Trans>home</Trans>
-          </Button> */}
-            <Button href={'/about'}>
+            <Button href={'/'}>
+              <Trans>header.home</Trans>
+            </Button>
+            <Button href={'/resume/jobs'}>
               <Trans>header.about-me</Trans>
             </Button>
-            <Button>
+            {/* <Button>
               <Trans>header.projects</Trans>
-            </Button>
+            </Button> */}
             <Button href={'/blog'}>
               <Trans>header.blog</Trans>
             </Button>
