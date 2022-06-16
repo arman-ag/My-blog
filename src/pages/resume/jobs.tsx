@@ -66,6 +66,24 @@ const jobs = () => {
             </span>
           </div>
         </div>
+
+        <div>
+          <h2>جوامع آزاد</h2>
+          <div className="flex my-4 items-center">
+            <img src={'/images/shirazlug.svg'} className="mx-4  " />
+            <div className="flex flex-col">
+              <span className="text-xl">
+                <Trans>jobs.shirazLug</Trans>
+              </span>
+              <span>
+                <Trans>jobs.shirazLug.position</Trans>
+              </span>
+              <span>
+                <Trans>jobs.shirazLug.year</Trans>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </ReWrapper>
   );

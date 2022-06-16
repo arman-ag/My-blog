@@ -28,7 +28,8 @@ const Technologies = ({ slice = false }: propsType) => {
   }, [slice]);
 
   return (
-    <div>
+    <div className="bg-no-repeat bg-center relative  ">
+      {/* <img src="/images/bg.svg" className="absolute " style={{ zIndex: '-1' }} /> */}
       <div className="flex justify-center flex-wrap">
         {data?.map((item: skillType, key: number) => (
           <div className="flex flex-col m-5 justify-center text-center " key={key}>

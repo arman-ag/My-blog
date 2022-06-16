@@ -16,8 +16,8 @@ const Button = ({ children, href, onClick = null, solid = false, styles }: butto
         href ? (
           <Link to={href!}>
             <button
-              className={`${styles} min-w-[18%] py-2  px-5	text-lg text-gray  border-2 rounded border-cyan-300${
-                checkParams() && `border-2 bg-cyan-300  shadow-2xl`
+              className={`${styles} min-w-[18%] py-2  px-5	 text-gray  border-2 border-cyan-300 rounded border-cyan-300${
+                checkParams() && `border-2  bg-cyan-300  shadow-2xl `
               }`}
               onClick={onClick!}>
               {children}
@@ -25,7 +25,7 @@ const Button = ({ children, href, onClick = null, solid = false, styles }: butto
           </Link>
         ) : (
           <button
-            className={`${styles} min-w-[18%] py-2  px-5	text-lg text-white bg-cyan-300 focus:bg-blue rounded`}
+            className={`${styles} min-w-[18%] py-2  px-5	text-lg text-white bg-cyan-300 rounded`}
             onClick={onClick!}>
             children
           </button>

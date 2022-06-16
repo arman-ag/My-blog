@@ -6,7 +6,7 @@ import { HamburgerMenuProps } from './types';
 const HamburgerMenu = ({ open = false }: HamburgerMenuProps) => {
   return (
     <nav
-      className={`transition ease-in-out duration-200 bg-cyan-300	 text-white w-full h-full fixed 	opacity-95 ${
+      className={`transition ease-in-out duration-200 bg-cyan-300	 text-white w-full h-full fixed z-10 	opacity-95 ${
         open ? `translate-x-0` : `translate-x-full`
       }`}>
       <div className="flex flex-col  items-center m-16	">

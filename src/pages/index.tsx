@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Layout>
         <div>
-          <div className=" flex items-center flex-col 	md:flex-row	 ">
+          <div className=" flex items-center flex-col m-10 	md:flex-row	  ">
             <p>
               <Trans>main.description</Trans>
             </p>
