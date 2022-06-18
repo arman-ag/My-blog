@@ -9,9 +9,8 @@ const blog = ({ data }: blogProps) => {
   return (
     <Layout>
       <div>
-        <h1>blog</h1>
         {posts.map((post: blogProps) => (
-          <article key={post.id}>
+          <article className='p-10 border-t-2 border-cyan-300' key={post.id}>
             <Link to={post.fields.slug}>
               <h2 className="text-3xl font-bold underline">{post.frontmatter.title}</h2>
             </Link>

@@ -11,8 +11,9 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
   return (
     <header className={`${openMenu && `sticky top-0 bg-primary z-10`}`}>
       <nav>
-        <div className="flex justify-between p-3 md:p-0 ">
-          <div className=" justify-around basis-56 md:flex hidden">
+        <div className="  p-3 md:p-0  relative">
+          <div className=" basis-96  flex  p-2 ">
+            <div className='hidden justify-between basis-44 md:flex '>
             <Button href={'/'}>
               <Trans>header.home</Trans>
             </Button>
@@ -25,17 +26,9 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
             <Button href={'/blog'}>
               <Trans>header.blog</Trans>
             </Button>
-          </div>
-          <div className="flex  basis-full items-center	 md:basis-28 md:justify-around">
-            <Button onClick={menuStatus} styles=" md:hidden z-10 mx-2 ">
-              {openMenu ? (
-                <AiOutlineClose className="h-6 w-6" />
-              ) : (
-                <AiOutlineMenu className="h-6 w-6" />
-              )}
-            </Button>
-            <div className="flex items-center ">
-              <span className="mx-2">
+            </div>
+            <div className="flex items-center order-2 md:order-1 mx-2">
+              <span className="mx-5">
                 {language === 'en' ? (
                   <Link to={originalPath} language={'fa'}>
                     فارسی
@@ -48,7 +41,18 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
               </span>
               <ThemeToggle />
             </div>
+              <div className="flex items-center	 md:basis-28 md:justify-around order-1 md:order-2">
+            <Button onClick={menuStatus} styles=" md:hidden z-10 mx-2 ">
+              {openMenu ? (
+                <AiOutlineClose className="h-6 w-6" />
+              ) : (
+                <AiOutlineMenu className="h-6 w-6" />
+              )}
+            </Button>
+            
           </div>
+          </div>
+          <img style={{top:'-2.5rem'}} className={`absolute w-40  ${language === 'en'?'right-4':'left-4'}`} src="/images/logo.png"/>
         </div>
       </nav>
     </header>
