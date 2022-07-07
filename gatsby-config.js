@@ -3,6 +3,12 @@ module.exports = {
   siteMetadata,
   plugins: [
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/headerIcon.png',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,

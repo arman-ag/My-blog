@@ -1,4 +1,5 @@
 import { graphql, Link } from 'gatsby';
+import { Helmet } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import Layout from '../../components/layout';
 interface blogProps {
@@ -7,21 +8,26 @@ interface blogProps {
 const blog = ({ data }: blogProps) => {
   const { posts } = data.blog;
   return (
-    <Layout>
-      <div>
-        {posts.map((post: blogProps) => (
-          <article className='p-10 border-t-2 border-cyan-300' key={post.id}>
-            <Link to={post.fields.slug}>
-              <h2 className="text-3xl font-bold underline">{post.frontmatter.title}</h2>
-            </Link>
-            <small>
-              {post.frontmatter.author}, {post.frontmatter.date}
-            </small>
-            <p>{post.excerpt}</p>
-          </article>
-        ))}
-      </div>
-    </Layout>
+    <>
+      <Helmet>
+        <title>Blog-aa-ghanbari</title>
+      </Helmet>
+      <Layout>
+        <div>
+          {posts.map((post: blogProps) => (
+            <article className="p-10 border-t-2 border-cyan-300" key={post.id}>
+              <Link to={post.fields.slug}>
+                <h2 className="text-3xl font-bold underline">{post.frontmatter.title}</h2>
+              </Link>
+              <small>
+                {post.frontmatter.author}, {post.frontmatter.date}
+              </small>
+              <p>{post.excerpt}</p>
+            </article>
+          ))}
+        </div>
+      </Layout>
+    </>
   );
 };
 

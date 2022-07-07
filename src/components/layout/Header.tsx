@@ -13,19 +13,19 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
       <nav>
         <div className="  p-3 md:p-0  relative">
           <div className=" basis-96  flex  p-2 ">
-            <div className='hidden justify-between basis-44 md:flex '>
-            <Button href={'/'}>
-              <Trans>header.home</Trans>
-            </Button>
-            <Button href={'/resume/jobs'}>
-              <Trans>header.about-me</Trans>
-            </Button>
-            {/* <Button>
+            <div className="hidden justify-between basis-44 md:flex ">
+              <Button href={'/'}>
+                <Trans>header.home</Trans>
+              </Button>
+              <Button href={'/resume/jobs'}>
+                <Trans>header.about-me</Trans>
+              </Button>
+              {/* <Button>
               <Trans>header.projects</Trans>
             </Button> */}
-            <Button href={'/blog'}>
-              <Trans>header.blog</Trans>
-            </Button>
+              <Button href={'/blog'}>
+                <Trans>header.blog</Trans>
+              </Button>
             </div>
             <div className="flex items-center order-2 md:order-1 mx-2">
               <span className="mx-5">
@@ -41,18 +41,22 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
               </span>
               <ThemeToggle />
             </div>
-              <div className="flex items-center	 md:basis-28 md:justify-around order-1 md:order-2">
-            <Button onClick={menuStatus} styles=" md:hidden z-10 mx-2 ">
-              {openMenu ? (
-                <AiOutlineClose className="h-6 w-6" />
-              ) : (
-                <AiOutlineMenu className="h-6 w-6" />
-              )}
-            </Button>
-            
+            <div className="flex items-center	 md:basis-28 md:justify-around order-1 md:order-2">
+              <Button onClick={menuStatus} styles=" md:hidden z-10 mx-2 ">
+                {openMenu ? (
+                  <AiOutlineClose className="h-6 w-6" />
+                ) : (
+                  <AiOutlineMenu className="h-6 w-6" />
+                )}
+              </Button>
+            </div>
           </div>
-          </div>
-          <img style={{top:'-2.5rem'}} className={`absolute w-40  ${language === 'en'?'right-4':'left-4'}`} src="/images/logo.png"/>
+          <img
+            style={{ top: '-5rem' }}
+            alt="main-logo"
+            className={`absolute w-80  ${language === 'en' ? 'right-4' : 'left-4'}`}
+            src="/logo/logo3.png"
+          />
         </div>
       </nav>
     </header>

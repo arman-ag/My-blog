@@ -1,13 +1,19 @@
 import { graphql } from 'gatsby';
+import { Helmet } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import ReWrapper from '../../components/layout/ReWrapper';
 import Technologies from '../../components/TechnologiesSection';
 
 const skills = () => {
   return (
-    <ReWrapper>
-      <Technologies />
-    </ReWrapper>
+    <>
+      <Helmet>
+        <title>Skills-aa-ghanbari</title>
+      </Helmet>
+      <ReWrapper>
+        <Technologies />
+      </ReWrapper>
+    </>
   );
 };
 
