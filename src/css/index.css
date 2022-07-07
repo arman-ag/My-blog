@@ -6,12 +6,14 @@ body.dark {
   --primary: #111827;
   --text-main: white;
   --menu: #252525;
+  --hover: #2b313b;
 }
 
 body.light {
   --primary: white;
   --text-main: #111827;
   --menu: #e6e6e6;
+  --hover: #e6e6e6;
 }
 @font-face {
   font-family: 'Vazir';

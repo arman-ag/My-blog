@@ -30,7 +30,8 @@ module.exports = {
     extend: {
       colors: {
         primary: 'var(--primary)',
-        'text-main': 'var(--text-main)'
+        'text-main': 'var(--text-main)',
+        "hover": "var(--hover)"
       },
 
       fontFamily: {

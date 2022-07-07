@@ -4,9 +4,12 @@ import React from 'react';
 import { Trans } from 'react-i18next';
 import Button from '../components/Button';
 import Layout from '../components/layout';
+import Posts from '../components/PostSection';
 import Technologies from '../components/TechnologiesSection';
-
-export default function Home() {
+interface blogProps {
+  [key: string]: any;
+}
+export default function Home({ data }: blogProps) {
   return (
     <>
       <Helmet>
@@ -25,6 +28,12 @@ export default function Home() {
           <Button href="/resume/skills" solid>
             <Trans>main.more</Trans>
           </Button>
+        </div>
+        <div className="my-5">
+          <h1 className="text-2xl my-16 text-center font-bold ">
+            <Trans>blog.posts</Trans>
+          </h1>
+          <Posts />
         </div>
       </Layout>
     </>
