@@ -39,7 +39,7 @@ const Posts = () => {
       {posts.map((post: blogProps) => (
         <div key={post.id} className="">
           <Link to={post.fields.slug}>
-            <div className="rounded-2xl   flex items-center	flex-col m-10  hover:bg-hover  cursor-pointer 	md:flex-row">
+            <div className="rounded-2xl   flex items-center	flex-col m-10 max-w-4xl	  hover:bg-hover  cursor-pointer 	md:flex-row">
               <Img
                 fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
                 alt={`${post.frontmatter.altFeturedImage}`}

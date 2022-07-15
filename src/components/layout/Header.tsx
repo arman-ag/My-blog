@@ -27,15 +27,15 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
                 <Trans>header.blog</Trans>
               </Button>
             </div>
-            <div className="flex items-center order-2 md:order-1 mx-2">
+            <div className="flex items-baseline order-2 md:order-1 mx-2 ">
               <span className="mx-5">
                 {language === 'en' ? (
                   <Link to={originalPath} language={'fa'}>
-                    فارسی
+                    <span className="text-xl">🇮🇷</span>
                   </Link>
                 ) : (
                   <Link to={originalPath} language={'en'}>
-                    English
+                    <span className="text-xl">🇬🇧</span>
                   </Link>
                 )}
               </span>
