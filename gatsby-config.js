@@ -50,13 +50,7 @@ module.exports = {
         // ]
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`
-      }
-    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -64,7 +58,25 @@ module.exports = {
         path: `${__dirname}/src/posts/`
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/posts`,
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-emotion`,
     'gatsby-plugin-dark-mode',
