@@ -10,7 +10,7 @@ const blogPosts = ({ data }: any) => {
   return (
     <Layout>
       <div>
-        <h1 className="text-4xl text-gray-400	font-bold">{post.frontmatter.title}</h1>
+        <h1 className="text-4xl font-bold">{post.frontmatter.title}</h1>
 
         <Img
           alt={`${post.frontmatter.altFeturedImage}`}
