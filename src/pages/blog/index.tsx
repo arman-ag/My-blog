@@ -1,4 +1,5 @@
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import { Helmet } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { Trans } from 'react-i18next';
@@ -16,23 +17,30 @@ const blog = ({ data }: blogProps) => {
       </Helmet>
       <Layout>
         <div className="p-10  ">
-          <h1 className="text-3xl text-center font-bold ">
+          <h1 className="text-3xl  font-bold ">
             <Trans>blog.posts</Trans>
           </h1>
         </div>
         <div>
           {posts.map((post: blogProps) => (
-            <article className="p-10 border-t-2 border-cyan-300" key={post.id}>
+            <div key={post.id}>
+              <div className="border-t-2 border-cyan-300 w-11/12 m-auto 	" />
               <Link to={post.fields.slug}>
-                <h2 className="text-3xl font-bold my-3 ">{post.frontmatter.title}</h2>
+                <div className=" p-10 flex items-center	flex-col 	md:flex-row">
+                  <Img
+                    fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+                    alt={`${post.frontmatter.altFeturedImage}`}
+                    className="w-56 rounded-2xl"
+                  />
+
+                  <div className="mx-5 flex flex-col">
+                    <h2 className="text-3xl font-bold my-3 ">{post.frontmatter.title}</h2>
+                    <small className="text-blue">{post.frontmatter.date}</small>
+                    <p className="mt-3">{post.frontmatter.excerpt}</p>
+                  </div>
+                </div>
               </Link>
-              <div className="my-2">
-                <small>
-                  {post.frontmatter.author} , {post.frontmatter.date}
-                </small>
-              </div>
-              <p>{post.excerpt}</p>
-            </article>
+            </div>
           ))}
         </div>
       </Layout>
@@ -51,7 +59,15 @@ export const pageQuery = graphql`
         frontmatter {
           date(fromNow: true)
           title
-          author
+          excerpt
+          altFeturedImage
+          featuredImage {
+            childImageSharp {
+              fluid(maxWidth: 400) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
         excerpt
         id
