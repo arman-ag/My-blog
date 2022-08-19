@@ -1,12 +1,11 @@
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
   const post = data.markdownRemark;
   let featuredImgFluid = post?.frontmatter.featuredImage.childImageSharp.fluid;
-  const [color, setColor] = useState('github-light');
-  console.log({ color });
+
   useEffect(() => {
     let script = document.createElement('script');
     let anchor = document.getElementById('inject-comments-for-uterances');
@@ -35,7 +34,6 @@ const blogPosts = ({ data }: any) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <div id="inject-comments-for-uterances" />
-        <button onClick={() => setColor('icy-dark')}>setColor</button>
       </div>
     </Layout>
   );
