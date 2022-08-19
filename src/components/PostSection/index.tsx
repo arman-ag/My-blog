@@ -1,6 +1,5 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import React from 'react';
 
 interface blogProps {
   [key: string]: any;
@@ -52,7 +51,6 @@ const Posts = () => {
                 <p className="mt-3 text-sm">{post.frontmatter.excerpt}</p>
               </div>
             </div>
-            <div className="border-t-2 border-cyan-300 w-8/12 m-auto	" />
           </Link>
         </div>
       ))}

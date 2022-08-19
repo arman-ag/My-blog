@@ -1,7 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { Helmet } from 'gatsby-plugin-react-i18next';
-import React from 'react';
 import { Trans } from 'react-i18next';
 import Layout from '../../components/layout';
 
@@ -11,22 +10,22 @@ interface blogProps {
 const blog = ({ data }: blogProps) => {
   const { posts } = data.blog;
   return (
-    <>
+    <div>
       <Helmet>
         <title>Blog-aa-ghanbari</title>
       </Helmet>
       <Layout>
-        <div className="p-10  ">
+        <div>
           <h1 className="text-3xl  font-bold ">
             <Trans>blog.posts</Trans>
           </h1>
+          <div className="my-4 border-t-2 border-cyan-300 w-6/12 " />
         </div>
-        <div>
+        <div className="flex flex-col align-center md:flex-row justify-between flex-wrap">
           {posts.map((post: blogProps) => (
-            <div key={post.id}>
-              <div className="border-t-2 border-cyan-300 w-11/12 m-auto 	" />
+            <div className=" w-4/12 m-auto my-0 	max-h-96	">
               <Link to={post.fields.slug}>
-                <div className=" p-10 flex items-center	flex-col 	md:flex-row">
+                <div className=" p-10 flex items-center	flex-col 	">
                   <Img
                     fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
                     alt={`${post.frontmatter.altFeturedImage}`}
@@ -44,7 +43,7 @@ const blog = ({ data }: blogProps) => {
           ))}
         </div>
       </Layout>
-    </>
+    </div>
   );
 };
 

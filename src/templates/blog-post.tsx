@@ -71,12 +71,13 @@ const blogPosts = ({ data }: any) => {
           {data.markdownRemark.frontmatter.tags.map((item: string, key: number) => (
             <Link
               to={`/tags/${kebabCase(item)}/`}
-              className="rounded-full	bg-gray-100 p-2 text-xs	font-bold	"
+              className="m-auto rounded-3xl	bg-gray-100 px-5 py-2 text-xs	font-bold	"
               key={key}>
               {item}
             </Link>
           ))}
         </div>
+
         <div id="inject-comments-for-uterances" />
       </div>
     </Layout>
