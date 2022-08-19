@@ -1,6 +1,19 @@
+import { useLocation } from '@reach/router';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { useEffect } from 'react';
+import {
+  EmailIcon,
+  EmailShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  PocketIcon,
+  PocketShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  WhatsappIcon,
+  WhatsappShareButton
+} from 'react-share';
 import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
   const post = data.markdownRemark;
@@ -16,7 +29,7 @@ const blogPosts = ({ data }: any) => {
     script.setAttribute('issue-term', 'pathname');
     script.setAttribute('theme', `preferred-color-scheme`);
     script.setAttribute('label', 'blog-comments');
-    anchor.appendChild(script);
+    anchor!.appendChild(script);
   }, []);
 
   return (
@@ -33,6 +46,23 @@ const blogPosts = ({ data }: any) => {
           className="prose md:prose-xl lg:prose-lg dark:prose-invert max-w-none prose-h2:font-normal	 "
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <div className="flex justify-around md:w-3/12 m-auto my-12">
+          <TelegramShareButton title={post.frontmatter.title} url={useLocation().href}>
+            <TelegramIcon size={32} round={true} />
+          </TelegramShareButton>
+          <WhatsappShareButton title={post.frontmatter.title} url={useLocation().href}>
+            <WhatsappIcon size={32} round={true} />
+          </WhatsappShareButton>
+          <LinkedinShareButton title={post.frontmatter.title} url={useLocation().href}>
+            <LinkedinIcon size={32} round={true} />
+          </LinkedinShareButton>
+          <PocketShareButton title={post.frontmatter.title} url={useLocation().href}>
+            <PocketIcon size={32} round={true} />
+          </PocketShareButton>
+          <EmailShareButton title={post.frontmatter.title} url={useLocation().href}>
+            <EmailIcon size={32} round={true} />
+          </EmailShareButton>
+        </div>
         <div id="inject-comments-for-uterances" />
       </div>
     </Layout>
