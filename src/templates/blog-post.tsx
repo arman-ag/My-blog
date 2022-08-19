@@ -19,7 +19,6 @@ import {
 } from 'react-share';
 import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
-  console.log(data);
   const post = data.markdownRemark;
   let featuredImgFluid = post?.frontmatter.featuredImage.childImageSharp.fluid;
 
