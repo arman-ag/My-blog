@@ -1,11 +1,24 @@
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import React from 'react';
+import { useEffect, useState } from 'react';
 import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
   const post = data.markdownRemark;
-  console.log(post);
   let featuredImgFluid = post?.frontmatter.featuredImage.childImageSharp.fluid;
+  const [color, setColor] = useState('github-light');
+  console.log({ color });
+  useEffect(() => {
+    let script = document.createElement('script');
+    let anchor = document.getElementById('inject-comments-for-uterances');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.setAttribute('async', true);
+    script.setAttribute('repo', 'arman-ag/blog-comments');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', `preferred-color-scheme`);
+    script.setAttribute('label', 'blog-comments');
+    anchor.appendChild(script);
+  }, []);
 
   return (
     <Layout>
@@ -21,6 +34,8 @@ const blogPosts = ({ data }: any) => {
           className="prose md:prose-xl lg:prose-lg dark:prose-invert max-w-none prose-h2:font-normal	 "
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <div id="inject-comments-for-uterances" />
+        <button onClick={() => setColor('icy-dark')}>setColor</button>
       </div>
     </Layout>
   );
