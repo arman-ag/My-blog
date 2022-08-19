@@ -1,6 +1,9 @@
 import { useLocation } from '@reach/router';
+import kebabCase from 'lodash/kebabCase';
+
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { Link } from 'gatsby-plugin-react-i18next';
 import { useEffect } from 'react';
 import {
   EmailIcon,
@@ -16,6 +19,7 @@ import {
 } from 'react-share';
 import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
+  console.log(data);
   const post = data.markdownRemark;
   let featuredImgFluid = post?.frontmatter.featuredImage.childImageSharp.fluid;
 
@@ -63,6 +67,16 @@ const blogPosts = ({ data }: any) => {
             <EmailIcon size={32} round={true} />
           </EmailShareButton>
         </div>
+        <div className="flex justify-around md:w-3/12 m-auto my-5">
+          {data.markdownRemark.frontmatter.tags.map((item: string, key: number) => (
+            <Link
+              to={`/tags/${kebabCase(item)}/`}
+              className="rounded-full	bg-gray-100 p-2 text-xs	font-bold	"
+              key={key}>
+              {item}
+            </Link>
+          ))}
+        </div>
         <div id="inject-comments-for-uterances" />
       </div>
     </Layout>
@@ -82,9 +96,11 @@ export const query = graphql`
         }
       }
     }
+
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        tags
         title
         date
         altFeturedImage

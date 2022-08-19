@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Aside from './Aside';
 import Footer from './Footer';
@@ -17,7 +17,7 @@ const Layout = ({ children }: layoutProps) => {
         <Aside />
 
         <HamburgerMenu open={open} />
-        <main className=" min-h-screen flex-grow p-6">{children}</main>
+        <main className=" min-h-screen flex-grow p-16">{children}</main>
       </div>
       <Footer />
     </div>
