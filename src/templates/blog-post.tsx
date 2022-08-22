@@ -33,15 +33,18 @@ const blogPosts = ({ data }: any) => {
     script.setAttribute('label', 'blog-comments');
     anchor!.appendChild(script);
   }, []);
-
   return (
     <>
-      <Helmet
-        title="I am a page title"
+      {/* <Helmet
+        title={`blog|${post.frontmatter.title}`}
         meta={[
           {
             property: `og:title`,
             content: `${post.frontmatter.title}`
+          },
+          {
+            property: `og:description`,
+            content: `${post.frontmatter.excerpt}`
           },
           {
             property: `og:type`,
@@ -52,7 +55,18 @@ const blogPosts = ({ data }: any) => {
             content: `${featuredImgFluid}`
           }
         ]}
-      />
+      /> */}
+      <Helmet>
+        <title>Whatever</title>
+
+        <meta property="og:image" content={`${featuredImgFluid}`} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Whatever" />
+        <meta property="og:description" content="Description" />
+        <meta property="og:url" content="https://example.org" />
+        <meta property="og:updated_time" content="2019-01-31" />
+      </Helmet>
       <Layout>
         <div>
           <h1 className="text-4xl font-bold">{post.frontmatter.title}</h1>
@@ -121,6 +135,7 @@ export const query = graphql`
         tags
         title
         date
+        excerpt
         altFeturedImage
         featuredImage {
           childImageSharp {
