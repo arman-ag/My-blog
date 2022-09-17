@@ -59,7 +59,7 @@ const blogPosts = ({ data }: any) => {
       <Helmet>
         <title>Whatever</title>
         <meta property="og:site_name" content="personal blog" />
-        <meta property="og:image" content={`${featuredImgFluid}`} />
+        <meta property="og:image" content={featuredImgFluid} />
         <meta property="og:image:height" content="120" />
         <meta property="og:image:width" content="200" />
         <meta property="og:locale" content="en_US" />
