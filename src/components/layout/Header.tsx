@@ -1,5 +1,4 @@
 import { Link, Trans, useI18next } from 'gatsby-plugin-react-i18next';
-import React from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Button from '../Button';
 import ThemeToggle from './ThemeToggle';
@@ -11,8 +10,26 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
   return (
     <header className={`${openMenu && `sticky top-0 bg-primary z-10`}`}>
       <nav>
-        <div className="  p-3 md:p-0  relative">
-          <div className=" basis-96  flex  p-2 ">
+        <div className="  p-3 md:p-0 flex justify-between items-baseline`` relative">
+          <div className="flex items-center	  md:basis-1/6 md:start ">
+            <div className="flex items-center  ">
+              <span className="mx-5 ">
+                {language === 'en' ? (
+                  <Link to={originalPath} language={'fa'}>
+                    <span className="text-xl">🇮🇷</span>
+                  </Link>
+                ) : (
+                  <Link to={originalPath} language={'en'}>
+                    <span className="text-xl">🇬🇧</span>
+                  </Link>
+                )}
+              </span>
+
+              <ThemeToggle />
+            </div>
+          </div>
+
+          <div className="  justify-end  flex  p-2  md:basis-1/6 md:mx-5">
             <div className="hidden justify-between basis-44 md:flex ">
               <Button href={'/'}>
                 <Trans>header.home</Trans>
@@ -27,36 +44,22 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
                 <Trans>header.blog</Trans>
               </Button>
             </div>
-            <div className="flex items-baseline order-2 md:order-1 mx-2 ">
-              <span className="mx-5">
-                {language === 'en' ? (
-                  <Link to={originalPath} language={'fa'}>
-                    <span className="text-xl">🇮🇷</span>
-                  </Link>
-                ) : (
-                  <Link to={originalPath} language={'en'}>
-                    <span className="text-xl">🇬🇧</span>
-                  </Link>
-                )}
-              </span>
-              <ThemeToggle />
-            </div>
-            <div className="flex items-center	 md:basis-28 md:justify-around order-1 md:order-2">
-              <Button onClick={menuStatus} styles=" md:hidden z-10 mx-2 ">
-                {openMenu ? (
-                  <AiOutlineClose className="h-6 w-6" />
-                ) : (
-                  <AiOutlineMenu className="h-6 w-6" />
-                )}
-              </Button>
-            </div>
+
+            <Button onClick={menuStatus} styles=" md:hidden z-10 mx-2 ">
+              {openMenu ? (
+                <AiOutlineClose className="h-6 w-6" />
+              ) : (
+                <AiOutlineMenu className="h-6 w-6" />
+              )}
+            </Button>
           </div>
-          <img
+
+          {/* <img
             style={{ top: '-5rem' }}
             alt="main-logo"
             className={`absolute w-80  ${language === 'en' ? 'right-4' : 'left-4'}`}
             src="/logo/logo3.png"
-          />
+          /> */}
         </div>
       </nav>
     </header>
