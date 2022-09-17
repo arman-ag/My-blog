@@ -20,6 +20,7 @@ import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
   const post = data.markdownRemark;
   let featuredImgFluid = post?.frontmatter.featuredImage.childImageSharp.fluid;
+  console.log(post?.frontmatter.featuredImage.childImageSharp);
   const location = useLocation();
   useEffect(() => {
     let script = document.createElement('script');
@@ -35,37 +36,16 @@ const blogPosts = ({ data }: any) => {
   }, []);
   return (
     <>
-      {/* <Helmet
-        title={`blog|${post.frontmatter.title}`}
-        meta={[
-          {
-            property: `og:title`,
-            content: `${post.frontmatter.title}`
-          },
-          {
-            property: `og:description`,
-            content: `${post.frontmatter.excerpt}`
-          },
-          {
-            property: `og:type`,
-            content: `website`
-          },
-          {
-            property: `og:image`,
-            content: `${featuredImgFluid}`
-          }
-        ]}
-      /> */}
       <Helmet>
         <title>Whatever</title>
-        <meta property="og:site_name" content="personal blog" />
-        <meta property="og:image" content={featuredImgFluid} />
+        <meta property="og:site_name" content="arman alighanbari personal blog" />
+        <meta property="og:image" content="/images/army.jpg" />
         <meta property="og:image:height" content="120" />
         <meta property="og:image:width" content="200" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Whatever" />
-        <meta property="og:description" content="Description" />
+        <meta property="og:title" content={`blog|${post.frontmatter.title}`} />
+        <meta property="og:description" content={`${post.frontmatter.excerpt}`} />
         <meta property="og:url" content={`https://www.aa-ghanbari.com${location.pathname}`} />
         <meta property="og:updated_time" content="2019-01-31" />
       </Helmet>
