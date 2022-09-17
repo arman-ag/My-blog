@@ -58,7 +58,7 @@ const jobs = () => {
           </div>
 
           <div className="flex my-4">
-            <img src={'/images/Novin.png'} className="mx-2 w-24 " />
+            <img src={'/images/Novin.png'} className=" w-24 " />
             <div className="flex flex-col">
               <span className="text-xl">
                 <Trans>jobs.novindev</Trans>
@@ -73,7 +73,11 @@ const jobs = () => {
           </div>
 
           <div>
-            <h2>جوامع آزاد</h2>
+            <h2 className="my-10 ">
+              <span className="text-xl font-bold  ">
+                <Trans>jobs.community</Trans>
+              </span>
+            </h2>
             <div className="flex my-4 items-center">
               <img src={'/images/shirazlug.svg'} className="mx-4  " />
               <div className="flex flex-col">
