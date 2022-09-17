@@ -1,15 +1,6 @@
 const siteMetadata = require('./src/data/siteMetadata');
 module.exports = {
-  siteMetadata: {
-    title: 'arman alighanbari  blog',
-    description: 'arman alighanbari personal blog',
-    siteUrl: "https://www.aa-ghanbari.com",
-    og: {
-      siteName: "arman alighanbari personal blog",
-
-    }
-
-  },
+  siteMetadata,
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
