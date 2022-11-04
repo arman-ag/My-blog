@@ -30,7 +30,6 @@ export default function Seo(props: SeoProps) {
           siteUrl
           og {
             siteName
-            twitterCreator
           }
         }
       }
@@ -63,7 +62,7 @@ export default function Seo(props: SeoProps) {
     },
     {
       name: 'og:image',
-      content: ogImage?.images.fallback.src
+      content: ogImage?.images?.fallback?.src
     },
     {
       name: 'og:image:width',
@@ -92,27 +91,27 @@ export default function Seo(props: SeoProps) {
     {
       name: 'og:url',
       content: `${site?.siteMetadata?.siteUrl}${location.pathname}`
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image'
-    },
-    {
-      name: 'twitter:description',
-      content: description
-    },
-    {
-      name: 'twitter:title',
-      content: title
-    },
-    {
-      name: 'twitter:image',
-      content: ogImage?.images.fallback.src
-    },
-    {
-      name: 'twitter:creator',
-      content: site!.siteMetadata!.og!.twitterCreator
     }
+    // {
+    //   name: 'twitter:card',
+    //   content: 'summary_large_image'
+    // },
+    // {
+    //   name: 'twitter:description',
+    //   content: description
+    // },
+    // {
+    //   name: 'twitter:title',
+    //   content: title
+    // },
+    // {
+    //   name: 'twitter:image',
+    //   content: ogImage?.images?.fallback.src
+    // },
+    // {
+    //   name: 'twitter:creator',
+    //   content: site!.siteMetadata!.og!.twitterCreator
+    // }
   ];
 
   // If we have keywords, then add it

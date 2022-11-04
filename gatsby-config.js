@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: "https://www.aa-ghanbari.com",
     og: {
       siteName: "arman alighanbari personal blog",
-      twitterCreator: '@armanAg49',
+      // twitterCreator: '@armanAg49',
     }
   },
   plugins: [
