@@ -1,15 +1,13 @@
 import { graphql } from 'gatsby';
-import { Helmet } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { Trans } from 'react-i18next';
+import Seo from '../../components/common/Seo';
 import ReWrapper from '../../components/layout/ReWrapper';
 
 const jobs = () => {
   return (
     <>
-      <Helmet>
-        <title>Jobs-aa-ghanbari</title>
-      </Helmet>
+      <Seo title={`Arman Alighnabari|Jobs`} />
       <ReWrapper>
         <div className="my-8">
           <div className="flex my-4">

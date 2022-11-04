@@ -3,6 +3,12 @@ const _ = require("lodash")
 const path = require(`path`);
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
+  actions.setBabelPlugin({
+    name: '@babel/plugin-transform-react-jsx',
+    options: {
+      runtime: 'automatic',
+    },
+  });
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `page` });
     createNodeField({

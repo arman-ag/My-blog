@@ -1,28 +1,10 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import { Trans } from 'react-i18next';
+import { skills } from '../../data/personalSkills.js';
 import { propsType, skillType } from './types';
 
 const Technologies = ({ slice = false }: propsType) => {
   const [data, setData] = useState([]);
-  const {
-    site: {
-      siteMetadata: { skills }
-    }
-  } = useStaticQuery(graphql`
-    query MetadataQuery {
-      site {
-        siteMetadata {
-          skills {
-            name
-            experience
-            url
-            years
-          }
-        }
-      }
-    }
-  `);
   useEffect(() => {
     slice ? setData(skills.slice(0, 8)) : setData(skills);
   }, [slice]);

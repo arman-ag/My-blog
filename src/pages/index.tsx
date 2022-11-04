@@ -1,7 +1,8 @@
 import { graphql } from 'gatsby';
-import { Helmet } from 'gatsby-plugin-react-i18next';
+import React from 'react';
 import { Trans } from 'react-i18next';
 import Button from '../components/Button';
+import Seo from '../components/common/Seo';
 import Layout from '../components/layout';
 import Posts from '../components/PostSection';
 import Technologies from '../components/TechnologiesSection';
@@ -10,10 +11,8 @@ interface blogProps {
 }
 export default function Home({ data }: blogProps) {
   return (
-    <div>
-      <Helmet>
-        <title>Home-aa-ghanbari</title>
-      </Helmet>
+    <>
+      <Seo title={`Arman Alighnabari`} />
       <Layout>
         <div>
           <div className=" flex items-center flex-col m-10 	md:flex-row	  ">
@@ -36,7 +35,7 @@ export default function Home({ data }: blogProps) {
           <Posts />
         </div>
       </Layout>
-    </div>
+    </>
   );
 }
 

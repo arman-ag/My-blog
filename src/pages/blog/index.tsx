@@ -1,7 +1,8 @@
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { Helmet } from 'gatsby-plugin-react-i18next';
+import React from 'react';
 import { Trans } from 'react-i18next';
+import Seo from '../../components/common/Seo';
 import Layout from '../../components/layout';
 
 interface blogProps {
@@ -10,10 +11,8 @@ interface blogProps {
 const blog = ({ data }: blogProps) => {
   const { posts } = data.blog;
   return (
-    <div>
-      <Helmet>
-        <title>Blog-aa-ghanbari</title>
-      </Helmet>
+    <>
+      <Seo title={`Arman Alighnabari|Blog`} />
       <Layout>
         <div>
           <h1 className="text-3xl  font-bold ">
@@ -43,7 +42,7 @@ const blog = ({ data }: blogProps) => {
           ))}
         </div>
       </Layout>
-    </div>
+    </>
   );
 };
 

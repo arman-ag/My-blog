@@ -1,15 +1,13 @@
 import { graphql } from 'gatsby';
-import { Helmet } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { Trans } from 'react-i18next';
+import Seo from '../../components/common/Seo';
 import ReWrapper from '../../components/layout/ReWrapper';
 
 const education = () => {
   return (
     <>
-      <Helmet>
-        <title>Education-aa-ghanbari</title>
-      </Helmet>
+      <Seo title={`Arman Alighnabari|Education`} />
       <ReWrapper>
         <div className="flex my-4 ">
           <img src={'/images/university.png'} className="mx-4" />

@@ -1,7 +1,7 @@
 import { useLocation } from '@reach/router';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { Helmet, Link } from 'gatsby-plugin-react-i18next';
+import { Link } from 'gatsby-plugin-react-i18next';
 import kebabCase from 'lodash/kebabCase';
 import React, { useEffect } from 'react';
 import {
@@ -16,12 +16,12 @@ import {
   WhatsappIcon,
   WhatsappShareButton
 } from 'react-share';
+import Seo from '../components/common/Seo';
 import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
   const post = data.markdownRemark;
   let featuredImgFluid = post?.frontmatter.featuredImage.childImageSharp.fluid;
   console.log(post?.frontmatter.featuredImage.childImageSharp);
-  const location = useLocation();
   useEffect(() => {
     let script = document.createElement('script');
     let anchor = document.getElementById('inject-comments-for-uterances');
@@ -36,19 +36,11 @@ const blogPosts = ({ data }: any) => {
   }, []);
   return (
     <>
-      <Helmet>
-        <title>Whatever</title>
-        <meta property="og:site_name" content="arman alighanbari personal blog" />
-        <meta property="og:image" content="/images/army.jpg" />
-        <meta property="og:image:height" content="120" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={`blog|${post.frontmatter.title}`} />
-        <meta property="og:description" content={`${post.frontmatter.excerpt}`} />
-        <meta property="og:url" content={`https://www.aa-ghanbari.com${location.pathname}`} />
-        <meta property="og:updated_time" content="2019-01-31" />
-      </Helmet>
+      <Seo
+        title={`blog|${post.frontmatter.title}`}
+        description={`${post.frontmatter.excerpt}`}
+        featuredImage={featuredImgFluid}
+      />
       <Layout>
         <div>
           <h1 className="text-4xl font-bold">{post.frontmatter.title}</h1>
@@ -89,14 +81,12 @@ const blogPosts = ({ data }: any) => {
               </Link>
             ))}
           </div>
-
           <div id="inject-comments-for-uterances" />
         </div>
       </Layout>
     </>
   );
 };
-
 export default blogPosts;
 
 export const query = graphql`
@@ -110,7 +100,6 @@ export const query = graphql`
         }
       }
     }
-
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

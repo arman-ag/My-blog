@@ -1,7 +1,15 @@
-const siteMetadata = require('./src/data/siteMetadata');
 module.exports = {
-  siteMetadata,
+  siteMetadata: {
+    title: 'arman alighanbari  blog',
+    description: 'arman alighanbari personal blog',
+    siteUrl: "https://www.aa-ghanbari.com",
+    og: {
+      siteName: "arman alighanbari personal blog",
+      twitterCreator: '@armanAg49',
+    }
+  },
   plugins: [
+
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -38,16 +46,6 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false
         }
-        // pages: [
-        //   {
-        //     matchPath: '/:lang?/blog/:uid',
-        //     getLanguageFromPath: true
-        //   },
-        //   {
-        //     matchPath: '/preview',
-        //     languages: ['en']
-        //   }
-        // ]
       }
     },
 
