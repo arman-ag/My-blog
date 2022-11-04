@@ -21,7 +21,6 @@ import Layout from '../components/layout';
 const blogPosts = ({ data }: any) => {
   const post = data.markdownRemark;
   let featuredImgFluid = post?.frontmatter.featuredImage.childImageSharp.fluid;
-  console.log(post?.frontmatter.featuredImage.childImageSharp);
   useEffect(() => {
     let script = document.createElement('script');
     let anchor = document.getElementById('inject-comments-for-uterances');

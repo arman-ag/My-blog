@@ -17,7 +17,7 @@ export type SeoProps = {
   description?: string;
   title?: string;
   keywords?: string;
-  featuredImage?: any;
+  featuredImage?: object;
 };
 export default function Seo(props: SeoProps) {
   // first get our default data from gatsby config and default featured image
@@ -33,22 +33,12 @@ export default function Seo(props: SeoProps) {
           }
         }
       }
-      featuredImage: file(absolutePath: { glob: "images/public.png" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 1200)
-        }
-      }
     }
   `);
   // determine the featured image from props
-  const ogImage =
-    props?.featuredImage?.src ??
-    (featuredImage?.childImageSharp?.gatsbyImageData as unknown as ImageDataType);
+  const ogImage = props?.featuredImage?.src ?? '/images/bcilpu.webp';
   const title = props.title ?? site?.siteMetadata?.title;
   const description = props.description ?? site?.siteMetadata?.description;
-  console.log('site------>');
-  console.log();
-  console.log('site', { title, description, ogImage });
 
   // Use the location hook to get current page URL
   const location = useLocation();

@@ -30,7 +30,6 @@ const blog = ({ data }: blogProps) => {
                     alt={`${post.frontmatter.altFeturedImage}`}
                     className="w-56 rounded-2xl"
                   />
-
                   <div className="mx-5 flex flex-col">
                     <h2 className="text-3xl font-bold my-3 ">{post.frontmatter.title}</h2>
                     <small className="text-blue">{post.frontmatter.date}</small>
