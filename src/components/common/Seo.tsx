@@ -42,7 +42,7 @@ export default function Seo(props: SeoProps) {
   `);
   // determine the featured image from props
   const ogImage =
-    props?.featuredImage?.base64 ??
+    props?.featuredImage?.src ??
     (featuredImage?.childImageSharp?.gatsbyImageData as unknown as ImageDataType);
   const title = props.title ?? site?.siteMetadata?.title;
   const description = props.description ?? site?.siteMetadata?.description;
@@ -62,15 +62,15 @@ export default function Seo(props: SeoProps) {
     },
     {
       name: 'og:image',
-      content: ogImage?.images?.fallback?.src
+      content: ogImage
     },
     {
       name: 'og:image:width',
-      content: `${ogImage?.width}`
+      content: 100
     },
     {
       name: 'og:image:height',
-      content: `${ogImage?.height}`
+      content: 100
     },
     {
       name: 'og:type',
