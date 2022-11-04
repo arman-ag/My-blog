@@ -12,7 +12,7 @@ interface blogProps {
 export default function Home({ data }: blogProps) {
   return (
     <>
-      <Seo title={`Arman Alighnabari`} />
+      <Seo title={`Arman Alighnabari | Home`} />
       <Layout>
         <div>
           <div className=" flex items-center flex-col m-10 	md:flex-row	  ">

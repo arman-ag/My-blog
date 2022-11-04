@@ -17,7 +17,7 @@ export type SeoProps = {
   description?: string;
   title?: string;
   keywords?: string;
-  featuredImage?: ImageDataType;
+  featuredImage?: any;
 };
 export default function Seo(props: SeoProps) {
   // first get our default data from gatsby config and default featured image
@@ -40,15 +40,15 @@ export default function Seo(props: SeoProps) {
       }
     }
   `);
-
   // determine the featured image from props
   const ogImage =
-    props.featuredImage ??
+    props?.featuredImage?.base64 ??
     (featuredImage?.childImageSharp?.gatsbyImageData as unknown as ImageDataType);
-
-  // determine title and description
   const title = props.title ?? site?.siteMetadata?.title;
   const description = props.description ?? site?.siteMetadata?.description;
+  console.log('site------>');
+  console.log();
+  console.log('site', { title, description, ogImage });
 
   // Use the location hook to get current page URL
   const location = useLocation();
@@ -92,26 +92,6 @@ export default function Seo(props: SeoProps) {
       name: 'og:url',
       content: `${site?.siteMetadata?.siteUrl}${location.pathname}`
     }
-    // {
-    //   name: 'twitter:card',
-    //   content: 'summary_large_image'
-    // },
-    // {
-    //   name: 'twitter:description',
-    //   content: description
-    // },
-    // {
-    //   name: 'twitter:title',
-    //   content: title
-    // },
-    // {
-    //   name: 'twitter:image',
-    //   content: ogImage?.images?.fallback.src
-    // },
-    // {
-    //   name: 'twitter:creator',
-    //   content: site!.siteMetadata!.og!.twitterCreator
-    // }
   ];
 
   // If we have keywords, then add it

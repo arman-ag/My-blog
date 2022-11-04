@@ -38,7 +38,7 @@ const blogPosts = ({ data }: any) => {
     <>
       <Seo
         title={`blog|${post.frontmatter.title}`}
-        description={`${post.frontmatter.excerpt}`}
+        description={post.frontmatter.excerpt}
         featuredImage={featuredImgFluid}
       />
       <Layout>
