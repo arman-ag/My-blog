@@ -36,7 +36,7 @@ export default function Seo(props: SeoProps) {
     }
   `);
   // determine the featured image from props
-  const ogImage = props?.featuredImage?.src ?? '/images/bcilpu.webp';
+  const ogImage = props?.featuredImage?.src ?? '/images/public.webp';
   const title = props.title ?? site?.siteMetadata?.title;
   const description = props.description ?? site?.siteMetadata?.description;
 
