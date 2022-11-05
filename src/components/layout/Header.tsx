@@ -3,7 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Button from '../Button';
 import ThemeToggle from './ThemeToggle';
 const Header = ({ openMenu, setOpenMenu }: any) => {
-  const { language, originalPath, languages } = useI18next();
+  const { language, originalPath } = useI18next();
   const menuStatus = () => {
     openMenu ? setOpenMenu(false) : setOpenMenu(true);
   };
@@ -40,9 +40,11 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
               {/* <Button>
               <Trans>header.projects</Trans>
             </Button> */}
-              <Button href={'/blog'}>
-                <Trans>header.blog</Trans>
-              </Button>
+              {language === 'en' ? null : (
+                <Button href={'/blog'}>
+                  <Trans>header.blog</Trans>
+                </Button>
+              )}
             </div>
 
             <Button onClick={menuStatus} styles=" md:hidden z-10 mx-2 ">

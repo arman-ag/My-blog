@@ -1,4 +1,5 @@
 import { graphql } from 'gatsby';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { Trans } from 'react-i18next';
 import Button from '../components/Button';
@@ -9,7 +10,9 @@ import Technologies from '../components/TechnologiesSection';
 interface blogProps {
   [key: string]: any;
 }
+
 export default function Home({ data }: blogProps) {
+  const { language } = useI18next();
   return (
     <>
       <Seo title={`Arman Alighnabari | Home`} />
@@ -27,13 +30,15 @@ export default function Home({ data }: blogProps) {
             <Trans>main.more</Trans>
           </Button>
         </div>
-        <div className="my-10">
-          <h1 className="text-2xl my-8 font-bold ">
-            <Trans>blog.posts</Trans>
-          </h1>
-          <div className="border-t-2 border-cyan-300 w-5/12 	" />
-          <Posts />
-        </div>
+        {language === 'en' ? null : (
+          <div className="my-10">
+            <h1 className="text-2xl my-8 font-bold ">
+              <Trans>blog.posts</Trans>
+            </h1>
+            <div className="border-t-2 border-cyan-300 w-5/12 	" />
+            <Posts />
+          </div>
+        )}
       </Layout>
     </>
   );
