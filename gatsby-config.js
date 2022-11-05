@@ -5,7 +5,6 @@ module.exports = {
     siteUrl: "https://www.aa-ghanbari.com",
     og: {
       siteName: "arman alighanbari personal blog",
-      // twitterCreator: '@armanAg49',
     }
   },
   plugins: [
@@ -13,7 +12,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: '/images/headerIcon.png',
+        icon: 'src/images/headerIcon.png',
       },
     },
     {
