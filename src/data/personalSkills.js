@@ -2,7 +2,7 @@ export const skills = [
   {
     name: 'javascript',
     experience: 'technologies.proficient',
-    url: '/images/javascript.png',
+    url: '/images/javascript.webp',
     years: 3
   },
   {
@@ -14,7 +14,7 @@ export const skills = [
   {
     name: 'Html',
     experience: 'technologies.expert',
-    url: '/images/html.png',
+    url: '/images/html.webp',
     years: 3
   },
   {
@@ -44,7 +44,7 @@ export const skills = [
   {
     name: 'typescript',
     experience: 'technologies.expert',
-    url: '/images/typescript.png',
+    url: '/images/typescript.webp',
     years: 2
   },
   {
@@ -56,7 +56,7 @@ export const skills = [
   {
     name: 'emotion',
     experience: 'technologies.expert',
-    url: '/images/emotion.png',
+    url: '/images/emotion.webp',
     years: 1
   },
   {
@@ -68,19 +68,19 @@ export const skills = [
   {
     name: 'material ui',
     experience: 'technologies.expert',
-    url: '/images/mui.png',
+    url: '/images/mui.webp',
     years: 2
   },
   {
     name: 'tailwind ',
     experience: 'technologies.proficient',
-    url: '/images/tailwind.png',
+    url: '/images/tailwind.webp',
     years: 2
   },
   {
     name: 'linux ',
     experience: 'technologies.proficient',
-    url: '/images/linux.jpeg',
+    url: '/images/linux.webp',
     years: 4
   },
   {
@@ -98,7 +98,7 @@ export const skills = [
   {
     name: 'redux ',
     experience: 'technologies.proficient',
-    url: '/images/redux.png',
+    url: '/images/redux.webp',
     years: 2
   },
   {

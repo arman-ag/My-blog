@@ -10,7 +10,7 @@ const education = () => {
       <Seo title={`Arman Alighnabari|Education`} />
       <ReWrapper>
         <div className="flex my-4 ">
-          <img src={'/images/university.png'} className="mx-4" />
+          <img src={'/images/university.webp'} className="mx-4" />
           <div className="flex flex-col ">
             <span>
               <Trans>education.university-name</Trans>

@@ -7,7 +7,7 @@ import ContactMe from '../ContactMe';
 const Aside = () => {
   const pageQuery = useStaticQuery(graphql`
     query technologies {
-      file(relativePath: { eq: "A-AG.jpg" }) {
+      file(relativePath: { eq: "A-AG.webp" }) {
         childrenImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

@@ -11,7 +11,7 @@ const jobs = () => {
       <ReWrapper>
         <div className="my-8">
           <div className="flex my-4">
-            <img src={'/images/army.png'} className="mx-4 w-16 " />
+            <img src={'/images/army.webp'} className="mx-4 w-16 " />
             <div className="flex flex-col">
               <span className="text-xl  ">
                 <Trans>jobs.ict-army</Trans>
@@ -26,7 +26,7 @@ const jobs = () => {
           </div>
 
           <div className="flex my-4">
-            <img src={'/images/jihaat.png'} className="mx-4 w-16 " />
+            <img src={'/images/jihaat.webp'} className="mx-4 w-16 " />
             <div className="flex flex-col">
               <span className="text-xl">
                 <Trans>jobs.jihaat</Trans>
@@ -41,7 +41,7 @@ const jobs = () => {
           </div>
 
           <div className="flex my-4">
-            <img src={'/images/eniac.png'} className="mx-4 w-20 " />
+            <img src={'/images/eniac.webp'} className="mx-4 w-20 " />
             <div className="flex flex-col">
               <span className="text-xl">
                 <Trans>jobs.eniac</Trans>
@@ -56,7 +56,7 @@ const jobs = () => {
           </div>
 
           <div className="flex my-4">
-            <img src={'/images/Novin.png'} className=" w-24 " />
+            <img src={'/images/Novin.webp'} className=" w-24 " />
             <div className="flex flex-col">
               <span className="text-xl">
                 <Trans>jobs.novindev</Trans>
