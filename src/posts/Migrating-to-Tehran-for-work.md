@@ -1,7 +1,7 @@
 ---
 title: مهاجرت به تهران برای کار
 featuredImage: ../images/posts/first/tehran.webp
-altFeturedImage: tehran city
+altFeturedImage: an image of Tehran
 date: 2022-07-10
 excerpt: تو این نوشته می خوام از تجربه خودم برای کار کردن ودوام آوردن تو تهران بگم 😀
 tags: ['کار', 'مهاجرت کاری']

@@ -21,7 +21,7 @@ const Aside = () => {
       <div className="flex flex-col items-center sticky top-11 mx-5 overflow-hidden	 ">
         <div>
           <Img
-            alt="arman alighanbari"
+            alt="Arman Alighanbari photo "
             fluid={pageQuery.file.childrenImageSharp[0].fluid}
             className="rounded-2xl mt-2 w-48 border  "
           />

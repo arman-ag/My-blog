@@ -3,6 +3,7 @@ export interface skillType {
   name: string;
   url: string;
   experience: string;
+  alt: string;
 }
 export interface propsType {
   slice?: boolean;

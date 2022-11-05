@@ -15,7 +15,7 @@ const Technologies = ({ slice = false }: propsType) => {
       <div className="flex justify-center flex-wrap">
         {data?.map((item: skillType, key: number) => (
           <div className="flex flex-col m-5 justify-center text-center " key={key}>
-            <img src={item.url} className="w-20 h-20" />
+            <img src={item.url} alt={item.alt} className="w-20 h-20" />
             <span>{item.name}</span>
             <span className="text-green">
               <Trans>{item.experience}</Trans>

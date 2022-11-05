@@ -11,7 +11,7 @@ const jobs = () => {
       <ReWrapper>
         <div className="my-8">
           <div className="flex my-4">
-            <img src={'/images/army.webp'} className="mx-4 w-16 " />
+            <img src={'/images/army.webp'} alt="Iran army logo" className="mx-4 w-16 " />
             <div className="flex flex-col">
               <span className="text-xl  ">
                 <Trans>jobs.ict-army</Trans>
@@ -26,7 +26,7 @@ const jobs = () => {
           </div>
 
           <div className="flex my-4">
-            <img src={'/images/jihaat.webp'} className="mx-4 w-16 " />
+            <img src={'/images/jihaat.webp'} alt="Jihaat company logo" className="mx-4 w-16 " />
             <div className="flex flex-col">
               <span className="text-xl">
                 <Trans>jobs.jihaat</Trans>
@@ -41,7 +41,7 @@ const jobs = () => {
           </div>
 
           <div className="flex my-4">
-            <img src={'/images/eniac.webp'} className="mx-4 w-20 " />
+            <img src={'/images/eniac.webp'} alt="Eniac company logo" className="mx-4 w-20 " />
             <div className="flex flex-col">
               <span className="text-xl">
                 <Trans>jobs.eniac</Trans>
@@ -56,7 +56,7 @@ const jobs = () => {
           </div>
 
           <div className="flex my-4">
-            <img src={'/images/Novin.webp'} className=" w-24 " />
+            <img src={'/images/Novin.webp'} alt="Novin.dev company logo" className=" w-24 " />
             <div className="flex flex-col">
               <span className="text-xl">
                 <Trans>jobs.novindev</Trans>
@@ -77,7 +77,11 @@ const jobs = () => {
               </span>
             </h2>
             <div className="flex my-4 items-center">
-              <img src={'/images/shirazlug.svg'} className="mx-4  " />
+              <img
+                src={'/images/shirazlug.svg'}
+                alt="Shirazlug open source community logo"
+                className="mx-4  "
+              />
               <div className="flex flex-col">
                 <span className="text-xl">
                   <Trans>jobs.shirazLug</Trans>
