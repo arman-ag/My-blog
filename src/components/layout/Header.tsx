@@ -16,11 +16,13 @@ const Header = ({ openMenu, setOpenMenu }: any) => {
               <span className="mx-5 ">
                 {language === 'en' ? (
                   <Link to={originalPath} language={'fa'}>
-                    <span className="text-xl">🇮🇷</span>
+                    <span className="text-xl mr-1">FA</span>
+                    <span className="text-base">🇮🇷</span>
                   </Link>
                 ) : (
                   <Link to={originalPath} language={'en'}>
-                    <span className="text-xl">🇬🇧</span>
+                    <span className="text-xl mr-1">EN</span>
+                    <span className="text-base">🇬🇧</span>
                   </Link>
                 )}
               </span>
