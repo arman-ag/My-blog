@@ -38,7 +38,6 @@ module.exports = {
         defaultLanguage: 'fa',
         redirect: false,
         generateDefaultLanguagePage: true,
-        siteUrl: `http://localhost:8000/`,
         i18nextOptions: {
           interpolation: {
             escapeValue: false
@@ -46,7 +45,13 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false
         }
-      }
+      },
+      pages: [
+        {
+          matchPath: "/blog",
+          Languages: ['fa']
+        }
+      ]
     },
 
     {
@@ -75,13 +80,18 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        excludes: ['/**/404', '/**/404.html'],
+      }
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-emotion`,
     'gatsby-plugin-dark-mode',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+
   ]
 };

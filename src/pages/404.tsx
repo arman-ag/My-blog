@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import { Helmet } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import { Trans } from 'react-i18next';
-import Layout from '../../components/layout';
+import Layout from '../components/layout';
 
 const NotFound = () => {
   return (
