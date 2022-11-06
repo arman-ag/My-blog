@@ -21,7 +21,7 @@ export type SeoProps = {
 };
 export default function Seo(props: SeoProps) {
   // first get our default data from gatsby config and default featured image
-  const { site, featuredImage } = useStaticQuery(graphql`
+  const { site } = useStaticQuery(graphql`
     query SeoMetaData {
       site {
         siteMetadata {
@@ -43,9 +43,7 @@ export default function Seo(props: SeoProps) {
   // Use the location hook to get current page URL
   const location = useLocation();
 
-  // construct the meta array for passing into react helmet.
   const metas = [
-    // basic seo
     {
       name: 'description',
       content: description
@@ -95,6 +93,9 @@ export default function Seo(props: SeoProps) {
   return (
     <Helmet>
       <html lang="en" />
+      <meta name="web_author" content="Arman Alighanbari" />
+      <meta name="designer" content="Arman Alighanbari" />
+      <meta name="publisher" content="Arman Alighanbari" />
       <meta charSet="utf-8" />
       <meta name="google-site-verification" content="umngjQA0AXBJdpbCVMKFhVbMiC6GoLApQVoebzQ7rSE" />
       <title>{title}</title>

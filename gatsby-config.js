@@ -1,7 +1,8 @@
+const siteUrl = "https://www.aa-ghanbari.com"
 module.exports = {
   siteMetadata: {
-    title: 'arman alighanbari  blog',
-    description: 'arman alighanbari personal blog',
+    title: 'Arman Alighanbari  blog',
+    description: 'Arman Alighanbari personal blog',
     siteUrl: "https://www.aa-ghanbari.com",
     og: {
       siteName: "arman alighanbari personal blog",
@@ -74,11 +75,13 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+
     `gatsby-plugin-postcss`,
     `gatsby-plugin-emotion`,
     'gatsby-plugin-dark-mode',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ]
 };
