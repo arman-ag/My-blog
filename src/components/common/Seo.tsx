@@ -96,6 +96,7 @@ export default function Seo(props: SeoProps) {
     <Helmet>
       <html lang="en" />
       <meta charSet="utf-8" />
+      <meta name="google-site-verification" content="umngjQA0AXBJdpbCVMKFhVbMiC6GoLApQVoebzQ7rSE" />
       <title>{title}</title>
       {metas.map((meta) => (
         <meta key={meta.name} name={meta.name} content={meta.content} />
