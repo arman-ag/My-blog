@@ -86,6 +86,12 @@ module.exports = {
         excludes: ['/**/404', '/**/404.html'],
       }
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.aa-ghanbari.com`,
+      },
+    },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-emotion`,
     'gatsby-plugin-dark-mode',
