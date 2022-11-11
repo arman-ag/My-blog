@@ -92,7 +92,8 @@ export default function Seo(props: SeoProps) {
 
   return (
     <Helmet>
-      <html lang="en" />
+      <html lang="fa" />
+      <meta http-equiv="Content-Language" content="en,fa" />
       <meta name="web_author" content="Arman Alighanbari" />
       <meta name="designer" content="Arman Alighanbari" />
       <meta name="publisher" content="Arman Alighanbari" />
